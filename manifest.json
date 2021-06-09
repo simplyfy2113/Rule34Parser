@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+
+	"name": "Rule34Parser(Alpha)",
+	"description": "HelpsSavingPicsFromRule34xxx",
+	"version": "1.0",
+	"icons": {"128": "icon_128.png"},
+	"background": {
+	"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "index.html"
+	},
+	"permissions": ["activeTab"],
+	"content_scripts": [ {"matches":["https://rule34.xxx/*"],"js": ["main.js"]},{"matches":["https://rule34.xxx/index.php?page=post&s=view&id=*"],"js": ["within.js"]}]
+
+}
